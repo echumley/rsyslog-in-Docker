@@ -22,7 +22,7 @@ docker run -d \
   --restart unless-stopped \
   rsyslog-in-docker:latest
 ```
-####One-liner:
+#### One-liner:
 ```
 docker run -d --name rsyslog-container -p 514:514/udp -p 514:514/tcp -v rsyslog-logs:/var/log --restart unless-stopped rsyslog-in-docker:latest
 ```
