@@ -1,6 +1,6 @@
 # rsyslog-in-Docker
 
-I created this Docker image created through sheer necessity since rsyslog hasn't updated their official Docker images for a fully featured rsyslog container in over 6 years. It's built on a Debian Bullseye Slim OS and runs the rsyslogd service. Enjoy!
+I created this Docker image through sheer necessity since rsyslog hasn't updated their official Docker images for a fully featured rsyslog container in over 6 years. It's built on a Debian Bullseye Slim OS and runs the rsyslogd service. Enjoy!
 
 ## How to Build this Container from Source
 
