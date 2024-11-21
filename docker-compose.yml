@@ -1,0 +1,10 @@
+services:
+  rsyslog-in-docker:
+    image: rsyslog-in-docker:latest  # Use a pre-built image from Docker Hub
+    container_name: rsyslog-container  # Optional: Add a custom container name
+    ports:
+      - "514:514/udp"
+      - "514:514/tcp"
+    volumes:
+      - ./logs:/var/log  # Use Docker volume
+    restart: unless-stopped
