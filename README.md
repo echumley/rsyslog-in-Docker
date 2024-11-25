@@ -12,6 +12,11 @@ docker build -t rsyslog-in-docker .
 
 ## How to Run this Container in Docker
 
+### Docker Pull
+```
+docker pull echumley/rsyslog-in-docker
+```
+
 #### Docker Run
 ```
 docker run -d \
@@ -20,7 +25,7 @@ docker run -d \
   -p 514:514/tcp \
   -v rsyslog-logs:/var/log \
   --restart unless-stopped \
-  rsyslog-in-docker:latest
+  echumley/rsyslog-in-docker:latest
 ```
 #### One-liner:
 ```
@@ -31,7 +36,7 @@ docker run -d --name rsyslog-container -p 514:514/udp -p 514:514/tcp -v rsyslog-
 ```
 services:
   rsyslog-in-docker:
-    image: rsyslog-in-docker:latest  # Use a pre-built image from Docker Hub
+    image: echumley/rsyslog-in-docker:latest  # Use a pre-built image from Docker Hub
     container_name: rsyslog-container  # Optional: Add a custom container name
     ports:
       - "514:514/udp"
